@@ -17,7 +17,14 @@ module.exports = {
             {
                 test: (/\.html$/),
                 loader:'file-loader?name=[name].[ext]'
-                },
+            },
+            {
+                test: (/\.css$/),
+                loader:[
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
         ]
     }
 }
