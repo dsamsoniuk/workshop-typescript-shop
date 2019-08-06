@@ -16,7 +16,6 @@ class ProductsService {
         }
         
     }
-   
 }
 
 export const Products = new ProductsService();
