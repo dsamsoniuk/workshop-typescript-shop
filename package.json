@@ -7,7 +7,7 @@
     "front-end:start": "http-server dist/front-end/ -p 4001",
     "front-end:build": "webpack --config src/front-end/webpack.config.js",
     "front-end:watch": "npm run front-end:build -- --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --rootDir test/specs/",
     "lint": "tslint src/front-end/**/**.ts"
   },
   "repository": {
@@ -21,11 +21,17 @@
   },
   "homepage": "https://github.com/dsamsoniuk/workshop-typescript-shop#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@types/jest": "^24.0.17",
     "@types/node": "^12.6.9",
+    "babel-jest": "^24.8.0",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^3.1.0",
     "file-loader": "^4.1.0",
     "http-server": "^0.11.1",
+    "jest": "^24.8.0",
     "style-loader": "^0.23.1",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
@@ -34,5 +40,10 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }

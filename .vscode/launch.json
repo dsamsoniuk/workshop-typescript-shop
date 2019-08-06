@@ -17,6 +17,19 @@
                 "--config",
                 "${workspaceFolder}\\src\\front-end\\webpack.config.js"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Unit test",
+            "program": "${workspaceFolder}\\node_modules\\.bin\\jest",
+            "args": [
+                "--rootDir",
+                "${workspaceFolder}\\test\\specs"
+            ],
+            "outFiles":[
+                "${fileDirname}\\*.js"
+            ]
         }
     ]
 }
