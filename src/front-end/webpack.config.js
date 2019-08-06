@@ -8,6 +8,9 @@ module.exports = {
         filename: 'bundle.js',
         path: path.join(root, "dist", "front-end"), // string
     },
+    resolve: {
+        extensions: ['.js', '.ts']
+    },
     module: {
         rules:[
             {
