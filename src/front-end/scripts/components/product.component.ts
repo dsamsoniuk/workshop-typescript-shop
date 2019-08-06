@@ -1,4 +1,4 @@
-import { Product } from "../interfaces/product.interface";
+import { Product } from "../../../share/interfaces/product.interface";
 
 export class ProductComponent {
     constructor (public product: Product) {}

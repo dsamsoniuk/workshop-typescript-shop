@@ -1,8 +1,8 @@
-import { ProductList } from "../interfaces/product-list.interface";
+import { ProductList } from "../../../share/interfaces/product-list.interface";
 import { makeRequest } from "../../../make-request";
 import { RequestError } from "../common/request-error";
 
-const productsUrl = 'http://my-json-server.typicode.com/piecioshka/fakes/products';
+const productsUrl = 'http://localhost:4000/products';
 
 class ProductsService {
     async getProducts() {
