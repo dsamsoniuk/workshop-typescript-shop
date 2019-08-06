@@ -8,7 +8,7 @@ async function main() {
 
     const $target = document.querySelector<HTMLDivElement>('.products-container');
     const products = await Products.getProducts();
-
+    // debugger;
     products.forEach((product) => {
         const p = new ProductComponent(product);
         p.render($target);

@@ -4,6 +4,7 @@ const root = path.join(__dirname, '..', '..');
 module.exports = {
     mode : 'development',
     entry: './src/front-end/scripts/main.ts',
+    devtool: '#source-map',
     output: {
         filename: 'bundle.js',
         path: path.join(root, "dist", "front-end"), // string

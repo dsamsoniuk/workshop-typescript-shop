@@ -1,7 +1,7 @@
 import { Product } from "../interfaces/product.interface";
 
 export class ProductComponent {
-    // constructor (public product: Product) {}
+    constructor (public product: Product) {}
     render ($target: HTMLElement): void {
         const $template = document.querySelector<HTMLTemplateElement>('#product-template');
         const $element = $template.content.cloneNode(true) as HTMLTemplateElement;

@@ -7,6 +7,7 @@ const productsUrl = 'http://my-json-server.typicode.com/piecioshka/fakes/product
 class ProductsService {
     async getProducts() {
         try {
+            // debugger;
             return await makeRequest<ProductList>(productsUrl);
         } catch(err) {
             console.log(err.name);
