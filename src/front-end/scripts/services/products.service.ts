@@ -1,14 +1,13 @@
-import { ProductList } from "../interfaces/product-list.interface"
-const productsUrl = '/products';
+import { ProductList } from "../interfaces/product-list.interface";
+import { makeRequest } from "../../../make-request";
+
+const productsUrl = 'http://my-json-server.typicode.com/piecioshka/fakes/products';
 
 class ProductsService {
     async getProducts() {
-        return await this.makeRequest<ProductList>(productsUrl);
+        return makeRequest<ProductList>(productsUrl);
     }
-    async makeRequest<T>(url: string): Promise<T> {
-        const response = await fetch(url);
-        return await response.json();
-    }
+   
 }
 
 export const Products = new ProductsService();
